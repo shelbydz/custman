@@ -1,12 +1,10 @@
-angular.module('components', [])
-  .directive('sideNav', function () {
-  return{
-      restrict: 'E',
-      transclude: true,
-      scope: {},
-      controller: function ($scope, $element) {
-      },
-      template: '<p>Side Nav</p>',
-      replace: true
-  }
-});
+agular.module('components', [])
+  .component('sideNav', {
+      templateUrl: '/static/app/views/sideNav.tpt',
+      controller: 'SideNavController'
+  })
+  .component('homeView', {
+      templateUrl: '/static/app/views/home.tpt',
+      controller: 'HomeViewController'
+  })
+;
